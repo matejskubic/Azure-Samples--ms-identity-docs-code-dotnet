@@ -1,0 +1,23 @@
+
+###
+# @name auth
+POST https://login.microsoftonline.com/{{tenantId}}/oauth2/v2.0/token
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+grant_type=client_credentials
+&scope=https://erp-releases.be-terna.com/.default
+&client_id={{clientId}}
+&client_secret={{clientSecret}}
+
+###
+GET {{url}}/weatherforecast
+Authorization: {{auth.response.body.token_type}} {{auth.response.body.access_token}}
+
+
+
+
+
+### expiriment
+GET {{url}}/weatherforecast
+Authorization: {{$aadV2Token scopes:https://erp-releases.be-terna.com/Artifact.Read tenantId:be-terna.com clientId:f55d7768-f943-4627-90bd-7af858cdf28f}}

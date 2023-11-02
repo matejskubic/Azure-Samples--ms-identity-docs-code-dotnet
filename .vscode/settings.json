@@ -1,0 +1,13 @@
+{
+    "rest-client.environmentVariables": {
+        "local-SER": {
+            "url": "http://localhost:5000",
+            "tenantId": "be-terna.com",
+            "aud": "1ab673b3-6265-454d-9e5b-4695dfa0ffad",
+            "scope": "https://erp-releases.be-terna.com/.default",
+            "clientId": "f55d7768-f943-4627-90bd-7af858cdf28f",
+            //"clientSecret": "" // set in /User/settings.json (Settings) 
+            "aadV2AppUri": "1ab673b3-6265-454d-9e5b-4695dfa0ffad"
+        }
+    }
+}
